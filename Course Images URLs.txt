@@ -1,0 +1,86 @@
+LEARNING CENTER WEBAPP - COURSE IMAGE URLs
+===========================================
+
+All images are from Unsplash and optimized to 400x300 pixels for web use.
+
+HOME PAGE COURSES (5 courses):
+-------------------------------
+1. Introduction to Python
+https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop&q=80
+
+2. Mastering Algebra
+https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop&q=80
+
+3. Web Development 101
+https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&q=80
+
+4. SAT Prep: Math & Reading
+https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop&q=80
+
+5. Data Science Fundamentals
+https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80
+
+
+COURSES PAGE - ALL COURSES (17 courses):
+------------------------------------------
+1. Computers and Coding Foundations
+https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&q=80
+
+2. Introduction to Google Office
+https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=300&fit=crop&q=80
+
+3. Using Excel and Google Sheets for Problem Solving
+https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80
+
+4. Introduction to AI
+https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&q=80
+
+5. Introduction to Python
+https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop&q=80
+
+6. Programming in C and C++
+https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop&q=80
+
+7. Algorithmic Thinking and Version Control
+https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&q=80
+
+8. Object-Oriented Programming Concepts
+https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&q=80
+
+9. Basics of Data Science
+https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80
+
+10. Applied Math with Python or R
+https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop&q=80
+
+11. Python for Real-World Applications
+https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop&q=80
+
+12. Data Structures and Algorithms
+https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop&q=80
+
+13. Introduction to Databases (DBMS)
+https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop&q=80
+
+14. Introduction to Machine Learning
+https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop&q=80
+
+15. Introduction to Artificial Intelligence
+https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&q=80
+
+16. Introduction to R for Data Science
+https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop&q=80
+
+17. Math Support Track (All Levels)
+https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop&q=80
+
+
+NOTES:
+------
+- All images are served from Unsplash CDN
+- Images are optimized to 400x300px resolution
+- Quality parameter set to 80 for balance between file size and visual quality
+- Same courses in Home and Courses pages use the same image URLs
+- These URLs can be used for hosting later by downloading the images
+- All images are free to use under Unsplash license
+
