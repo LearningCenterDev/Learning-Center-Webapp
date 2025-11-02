@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import LoginModal from "./LoginModal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const location = useLocation();
 
   const links = [
@@ -39,12 +37,12 @@ export default function Navbar() {
                   {l.name}
                 </Link>
               ))}
-              <button
-                onClick={() => setIsLoginModalOpen(true)}
+              <Link
+                to="/login"
                 className="px-4 py-2 rounded-md bg-blue-500 text-white transform transition-transform duration-200 hover:text-white focus:text-white hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
               >
                 Login
-              </button>
+              </Link>
             </div>
 
             <button
@@ -71,24 +69,17 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="px-6 py-4">
-              <button
-                onClick={() => {
-                  setIsLoginModalOpen(true);
-                  setOpen(false);
-                }}
-                className="px-4 py-2 rounded-md bg-blue-500 text-white transform transition-transform duration-200 hover:text-white focus:text-white hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+              <Link
+                to="/login"
+                onClick={() => setOpen(false)}
+                className="px-4 py-2 rounded-md bg-blue-500 text-white transform transition-transform duration-200 hover:text-white focus:text-white hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 block text-center"
               >
                 Login
-              </button>
+              </Link>
             </div>
           </div>
         )}
       </nav>
-
-      <LoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={() => setIsLoginModalOpen(false)} 
-      />
     </>
   );
 }
