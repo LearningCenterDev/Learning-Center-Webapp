@@ -38,14 +38,14 @@ export default function Courses() {
   return (
     <div className="bg-gradient-to-b from-blue-50 via-blue-25 to-blue-100 text-slate-800 min-h-screen">
       {/* Header Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-blue-50 via-white to-blue-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold leading-tight text-slate-800 mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-800 mb-4 sm:mb-6"
             >
               Explore Our <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">Courses</span>
             </motion.h1>
@@ -53,7 +53,7 @@ export default function Courses() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-slate-700 max-w-3xl mx-auto px-4"
             >
               Discover comprehensive learning paths designed for students of all ages. From coding foundations to advanced AI, we have the perfect course for your journey.
             </motion.p>
@@ -64,16 +64,16 @@ export default function Courses() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="bg-white rounded-2xl p-8 shadow-lg border border-blue-200 mb-12"
+            className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg border border-blue-200 mb-8 sm:mb-12"
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               {/* Search Bar */}
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" size={20} />
                 <input
                   type="text"
                   placeholder="Search courses..."
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-gray-500 text-gray-900"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -81,9 +81,9 @@ export default function Courses() {
 
               {/* Grade Level Filter */}
               <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" size={20} />
                 <select
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white text-gray-900"
                   value={selectedGrade}
                   onChange={(e) => setSelectedGrade(e.target.value)}
                 >
@@ -97,9 +97,9 @@ export default function Courses() {
 
               {/* Category Filter */}
               <div className="relative">
-                <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" size={20} />
                 <select
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white text-gray-900"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                 >
@@ -116,13 +116,13 @@ export default function Courses() {
       </section>
 
       {/* Courses Grid */}
-      <section className="py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-2">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-blue-100 via-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">
               {filteredCourses.length} Course{filteredCourses.length !== 1 ? 's' : ''} Found
             </h2>
-            <p className="text-slate-600">
+            <p className="text-sm sm:text-base text-slate-700">
               {searchQuery || selectedGrade !== "all" || selectedCategory !== "all" 
                 ? "Filtered results based on your criteria" 
                 : "Browse all available courses"}
@@ -130,13 +130,13 @@ export default function Courses() {
           </div>
 
           {filteredCourses.length === 0 ? (
-            <div className="text-center py-12">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">No courses found</h3>
-              <p className="text-slate-600">Try adjusting your search criteria or filters</p>
+            <div className="text-center py-8 sm:py-12">
+              <div className="text-4xl sm:text-6xl mb-4">🔍</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">No courses found</h3>
+              <p className="text-sm sm:text-base text-slate-700">Try adjusting your search criteria or filters</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredCourses.map((course, index) => (
                 <FadeInWhenVisible key={course.id} delay={index * 0.1}>
                   <motion.div
@@ -174,24 +174,24 @@ export default function Courses() {
                         <h3 className="text-xl font-bold text-slate-800 mb-2 line-clamp-2">
                           {course.title}
                         </h3>
-                        <p className="text-sm text-slate-600 line-clamp-3 mb-4">
+                        <p className="text-sm text-slate-700 line-clamp-3 mb-4">
                           {course.description}
                         </p>
 
                       {/* Course Details */}
                       <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-sm text-slate-600">
-                          <span className="font-medium">Grade Level:</span>
-                          <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">
+                        <div className="flex items-center gap-2 text-sm text-slate-700">
+                          <span className="font-semibold text-slate-900">Grade Level:</span>
+                          <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">
                             {course.gradeLevel}
                           </span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-slate-600">
-                          <Clock className="w-4 h-4" />
+                        <div className="flex items-center gap-2 text-sm text-slate-700">
+                          <Clock className="w-4 h-4 text-slate-600" />
                           <span>{course.duration}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-slate-600">
-                          <BookOpen className="w-4 h-4" />
+                        <div className="flex items-center gap-2 text-sm text-slate-700">
+                          <BookOpen className="w-4 h-4 text-slate-600" />
                           <span className="truncate">{course.techStack}</span>
                         </div>
                       </div>
@@ -216,28 +216,28 @@ export default function Courses() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-blue-100">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-blue-50 to-blue-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white border-4 border-blue-500 text-blue-700 rounded-3xl p-12 shadow-2xl relative overflow-hidden backdrop-blur-md"
+            className="bg-white border-4 border-blue-500 text-blue-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-md"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-transparent to-blue-200/30 rounded-3xl"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-300/30 rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-400/30 rounded-full translate-y-12 -translate-x-12"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-transparent to-blue-200/30 rounded-2xl sm:rounded-3xl"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-blue-300/30 rounded-full -translate-y-12 translate-x-12 sm:-translate-y-16 sm:translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-20 h-20 sm:w-24 sm:h-24 bg-blue-400/30 rounded-full translate-y-10 -translate-x-10 sm:translate-y-12 sm:-translate-x-12"></div>
             
             <div className="relative z-10">
-              <h3 className="text-4xl font-bold mb-4 text-blue-800">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-blue-800">
                 Ready to Start Learning?
               </h3>
-              <p className="mt-4 text-blue-600 text-lg mb-8">
+              <p className="mt-3 sm:mt-4 text-blue-600 text-base sm:text-lg mb-6 sm:mb-8">
                 Join thousands of students who are already advancing their skills with our comprehensive courses.
               </p>
               <a
                 href="#signup"
-                className="inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 hover:text-white transition-all duration-300 hover:from-blue-700 hover:to-blue-800"
+                className="inline-block px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 hover:text-white transition-all duration-300 hover:from-blue-700 hover:to-blue-800 text-sm sm:text-base"
               >
                 Get Started Today
               </a>
